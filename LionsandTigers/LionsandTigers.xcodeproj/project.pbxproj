@@ -22,6 +22,9 @@
 		073A153E19D8865200A3790B /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 073A153619D8865200A3790B /* Lioness.jpeg */; };
 		073A153F19D8865200A3790B /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 073A153719D8865200A3790B /* MalayanTiger.jpg */; };
 		073A154019D8865200A3790B /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 073A153819D8865200A3790B /* SiberianTiger.jpg */; };
+		075B6E7C19E0C76600E762E2 /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B6E7B19E0C76600E762E2 /* Lion.swift */; };
+		07A5D4D019E6C237009847B8 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A5D4CF19E6C237009847B8 /* Factory.swift */; };
+		07C6E9F019E1D9F40051747E /* lioncub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C6E9EF19E1D9F40051747E /* lioncub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		073A153619D8865200A3790B /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
 		073A153719D8865200A3790B /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
 		073A153819D8865200A3790B /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
+		075B6E7B19E0C76600E762E2 /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
+		07A5D4CF19E6C237009847B8 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		07C6E9EF19E1D9F40051747E /* lioncub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lioncub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 			isa = PBXGroup;
 			children = (
 				073A152F19D8837200A3790B /* Tiger.swift */,
+				075B6E7B19E0C76600E762E2 /* Lion.swift */,
+				07C6E9EF19E1D9F40051747E /* lioncub.swift */,
+				07A5D4CF19E6C237009847B8 /* Factory.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,9 +205,11 @@
 				TargetAttributes = {
 					073A150819D8478200A3790B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 4M78FY5WK3;
 					};
 					073A151D19D8478200A3790B = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 4M78FY5WK3;
 						TestTargetID = 073A150819D8478200A3790B;
 					};
 				};
@@ -257,7 +268,10 @@
 			files = (
 				073A151119D8478200A3790B /* ViewController.swift in Sources */,
 				073A153019D8837200A3790B /* Tiger.swift in Sources */,
+				07A5D4D019E6C237009847B8 /* Factory.swift in Sources */,
 				073A150F19D8478200A3790B /* AppDelegate.swift in Sources */,
+				075B6E7C19E0C76600E762E2 /* Lion.swift in Sources */,
+				07C6E9F019E1D9F40051747E /* lioncub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +414,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -411,6 +427,7 @@
 				INFOPLIST_FILE = LionsandTigersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LionsandTigers.app/LionsandTigers";
 			};
 			name = Debug;
@@ -419,6 +436,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -426,6 +445,7 @@
 				INFOPLIST_FILE = LionsandTigersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LionsandTigers.app/LionsandTigers";
 			};
 			name = Release;
@@ -449,6 +469,7 @@
 				073A152A19D8478200A3790B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		073A152B19D8478200A3790B /* Build configuration list for PBXNativeTarget "LionsandTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +478,7 @@
 				073A152D19D8478200A3790B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
